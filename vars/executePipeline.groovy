@@ -16,6 +16,7 @@ def call(String name = 'test') {
                     script {
                         env.VERSION = input message: 'Specify Version',
                                         parameters: [choice(name: 'VERSION', choices: step_getVersions("Jason"), description: 'Select Version')]
+                        echo "env.VERSION: ${env.VERSION}"
                     }
                 }
             }
