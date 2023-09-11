@@ -2,7 +2,15 @@ def call() {
     pipeline {
         agent any
 
+
         stages {
+            stage ("Starting") {
+                steps {
+                    script {
+                        echo "Starting"
+                    }
+                }
+            }
             stage('Get Versions to deploy') {
                 steps {
                     script {
