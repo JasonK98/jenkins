@@ -5,8 +5,10 @@ def call(String name = 'test') {
 
         stages {
             stage ("Import Libraries") {
-                script {
-                    library identifier: 'another-jenkins-test'
+                steps {
+                    script {
+                        library identifier: 'another-jenkins-test'
+                    }
                 }
             }
             stage ("Starting") {
